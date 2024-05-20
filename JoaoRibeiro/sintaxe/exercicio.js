@@ -40,7 +40,7 @@ nomes.unshift('INICIO')
 //remove ao fim e pega o elemento
 nomes.pop();
 
-console.table(nomes.sort())
+// console.table(nomes.sort())
 
 
 // //For IN - itera retornando cada índice (valor)
@@ -53,5 +53,10 @@ console.table(nomes.sort())
 //     console.log(valor)
 // }
 
-//Arrow function - ECMAS6
-nomes.forEach((n) => console.log(n))
+// //Arrow function - ECMAS6
+// nomes.forEach((n) => console.log(n))
+
+function minha_funcao(array){
+    return console.table(array);
+}
+minha_funcao(nomes.sort());
