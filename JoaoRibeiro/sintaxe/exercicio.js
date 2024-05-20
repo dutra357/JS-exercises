@@ -20,6 +20,8 @@ console.log(cidade);
 let texto = "Frase em LET";
 const pi = 3.14;
 
+var c = 4e+2;
+
 
 // VAR tem escopo de função
 
@@ -31,4 +33,4 @@ const pi = 3.14;
 
 //alert(nome)
 
-document.write(nome)
+document.write(c)
