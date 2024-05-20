@@ -1,10 +1,15 @@
+// //Aula 157
+// let elemento = null;
 
-let elemento = null;
+// elemento = document.documentElement;
 
-elemento = document.documentElement;
+// console.log(elemento.lang);
+// console.log(typeof(elemento))
 
-console.log(elemento.lang);
-console.log(typeof(elemento))
+// elemento2 = document.head;
+// console.log(elemento2);
+// //------
 
-elemento2 = document.head;
-console.log(elemento2);
+
+//158
+console.log(document.getElementById("h1_id").textContent)
