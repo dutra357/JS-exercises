@@ -28,3 +28,7 @@ const pi = 3.14;
 
 //Começar variáveis com letras _ ou $
 //Nunca começar com números!!
+
+//alert(nome)
+
+document.write(nome)
