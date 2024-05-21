@@ -11,5 +11,19 @@
 // //------
 
 
-//158
-console.log(document.getElementById("h1_id").textContent)
+// //158
+// //console.log(document.getElementById("h1_id").textContent)
+
+// let e = document.getElementsByTagName('p')
+// //e[0].innerText = "Nova Notícia"
+// console.log(e)
+
+
+//160
+//Query selector - usa seletores de CSS
+
+let e = document.querySelectorAll('p')
+
+setTimeout(() => {
+    console.log("Teste de timeout")
+}, 2000)
