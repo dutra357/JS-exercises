@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - Exercício 018</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-8 card">
+
+                <div class="row">
+                    <div class="col p-4">
+                        <div class="form-input">
+                            <input type="checkbox" name="check_1" id="check_1">
+                            <label for="check_1">Gestão de usuários</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="checkbox" name="check_2" id="check_2">
+                            <label for="check_2">Gestão de armazém</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="checkbox" name="check_3" id="check_3">
+                            <label for="check_3">Gestão de finanças</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="checkbox" name="check_4" id="check_4">
+                            <label for="check_4">Visualização de estatística</label>
+                        </div>
+                    </div>
+
+                    <div class="col p-4">
+                        <div class="form-input">
+                            <input type="checkbox" name="check_5" id="check_5">
+                            <label for="check_5">Coordenação dos trabalhos</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="checkbox" name="check_6" id="check_6">
+                            <label for="check_6">Gestão de calendário</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="checkbox" name="check_7" id="check_7">
+                            <label for="check_7">Utilização das máquinas</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="checkbox" name="check_8" id="check_8">
+                            <label for="check_8">Utilização das ferramentas</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 text-end">
+                    <div class="row justify-content-end">
+                        <div class="col-4 p-4">
+                            <select name="select_perfil" id="select_perfil" class="form-select">
+                                <option value="">Selecione o perfil</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="coordenador">Coordenador</option>
+                                <option value="operador">Operador</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- app.js -->
+    <script src="app.js"></script>
+</body>
+
+</html>
