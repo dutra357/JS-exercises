@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Exercise</title>
-    <script src="exercicio.js"></script>
-
+    
     <style>
         body {
             background-color: cadetblue;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .container {
@@ -49,47 +48,31 @@
                 Sequi aliquid sapiente impedit facilis nam?
             </p>
             
-            <div class="form">
-                <form action="">
-                    <label for="input01">input01</label>
+            <div>
+                <form action="/" id="formulario" method="post">
+                    <label for="input01">Peso</label>
                     <input type="text" name="input01" id="input01">
-                </form>
-            </div>
 
-            <div>
-                <form action="">
-                    <label for="input01">input02</label>
+                    <label for="input01">Altura</label>
                     <input type="text" name="input02" id="input02">
+
+                    <button style="margin-top: 20px;" type="submit">Enviar</button>
                 </form>
             </div>
 
-            <div>
-                <form action="">
-                    <label for="input01">input03</label>
-                    <input type="text" name="input03" id="input03">
-                </form>
-            </div>
 
-            <div>
-                <form action="">
-                    <label for="input01">input04</label>
-                    <input type="text" name="input04" id="input04">
-                </form>
-            </div>
-
-            <div>
-                <button>Enviar</button>
-            </div>
 
         </div>
 
         <br>
 
-        <div class="box2">
+        <div id="box2">
             <h3>Resultado:</h3>
             <p></p>
         </div>
     </div>
-    
+
+
+    <script src="exercicio.js"></script>
 </body>
 </html>

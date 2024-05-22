@@ -1,9 +1,16 @@
-let valor1 = document.querySelector("#input01").valor1;
-let valor2 = document.querySelector("#input02").valor2;
+const form = document.querySelector('#formulario');
 
-let box2 = document.querySelector(".box2");
+form.addEventListener('submit', function(e){
+    e.preventDefault();
 
-function calcular(valor1, valor2){
-    return valor1 + valor2;
+    let string = e.target.querySelector('#input01').value;
+    resultado(string)
+})
+
+function resultado (msg) {
+    const resultado = document.querySelector('#box2');
+
+    const p = document.createElement('p')
+    p.innerHTML = msg
+    resultado.appendChild(p)
 }
-
