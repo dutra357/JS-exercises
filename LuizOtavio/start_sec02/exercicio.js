@@ -29,6 +29,22 @@ function resultado (msg) {
     time.style = 'color: blue'
 }
 
-let atual = new Date();
+//let atual = new Date();
 
-console.log(atual.toLocaleTimeString() + " " + atual.toDateString())
+//console.log(atual.toLocaleTimeString() + " " + atual.toDateString())
+
+
+// let numeros = [1, 2, 3]
+
+// let [a, b, c] = numeros
+
+
+const objeto = {
+    nome: "Fulano de tal",
+    endereco: {
+        rua: 'Rua da silva',
+        numero: "numero 124",
+        cep: 88030011
+    }
+}
+console.log(objeto.endereco);
