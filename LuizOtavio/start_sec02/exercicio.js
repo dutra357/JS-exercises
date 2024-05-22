@@ -35,7 +35,7 @@ function resultado (msg) {
 }
 
 //let atual = new Date();
-//testede guit
+
 
 //console.log(atual.toLocaleTimeString() + " " + atual.toDateString())
 
