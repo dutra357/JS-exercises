@@ -32,6 +32,16 @@ function resultado (msg) {
 //console.log(atual.toLocaleTimeString() + " " + atual.toDateString())
 
 
-// let numeros = [1, 2, 3]
+// let numeros = [1, 2, 3, 4, 5, 6]
 
-// let [a, b, c] = numeros
+// const pessoa = {
+//     nome: "teste",
+//     endereco: {
+//         rua: "rua joao da silva",
+//         cep: 889008
+//     }
+// }
+
+// pessoa.forEach((elemento)=>{
+//     console.log(elemento)
+// })
