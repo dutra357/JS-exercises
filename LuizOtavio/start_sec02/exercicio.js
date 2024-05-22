@@ -10,8 +10,6 @@ form.addEventListener('submit', function(e){
 
 
 function resultado (msg) {
-    console.log(teste)
-
     const resultado = document.querySelector('#box2');
     const p = document.createElement('p')
     p.innerHTML = msg
@@ -37,14 +35,3 @@ function resultado (msg) {
 // let numeros = [1, 2, 3]
 
 // let [a, b, c] = numeros
-
-
-const objeto = {
-    nome: "Fulano de tal",
-    endereco: {
-        rua: 'Rua da silva',
-        numero: "numero 124",
-        cep: 88030011
-    }
-}
-console.log(objeto.endereco);

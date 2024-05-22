@@ -38,6 +38,12 @@
         .teste {
             color:red;
         }
+
+        .coluna {
+            display: flexbox;
+            
+            border: 1px solid black;
+        }
     </style>
 </head>
 
@@ -52,11 +58,11 @@
                 Sequi aliquid sapiente impedit facilis nam?
             </p>
             
-            <div>
+            <div class="coluna">
                 <form action="/" id="formulario" method="post">
                     <label for="input01">Peso</label>
                     <input type="text" name="input01" id="input01">
-
+                    <br>
                     <label for="input01">Altura</label>
                     <input type="text" name="input02" id="input02">
 
