@@ -45,3 +45,6 @@ function resultado (msg) {
 // pessoa.forEach((elemento)=>{
 //     console.log(elemento)
 // })
+
+// NODE_LIST não é um array, mas se comporta de maneira similar
+// "getComputedStyle" -> pega o elemento de estilo de um elemento do body
