@@ -7,10 +7,28 @@ form.addEventListener('submit', function(e){
     resultado(string)
 })
 
-function resultado (msg) {
-    const resultado = document.querySelector('#box2');
 
+
+function resultado (msg) {
+    console.log(teste)
+
+    const resultado = document.querySelector('#box2');
     const p = document.createElement('p')
     p.innerHTML = msg
+
     resultado.appendChild(p)
+    p.className = 'teste'
+
+
+    const time = document.createElement('p')
+
+    const data = new Date('2024-04-22 15:06');
+    time.innerHTML = data.getDate().toString();
+    resultado.appendChild(time)
+
+    time.style = 'color: blue'
 }
+
+let atual = new Date();
+
+console.log(atual.toLocaleTimeString() + " " + atual.toDateString())
