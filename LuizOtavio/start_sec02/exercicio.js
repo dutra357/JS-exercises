@@ -20,8 +20,15 @@ function resultado (msg) {
 
     const time = document.createElement('p')
 
-    const data = new Date('2024-04-22 15:06');
-    time.innerHTML = data.getDate().toString();
+    const data = new Date();
+
+    //cálculo de idade - tempo em JS
+    const nascimento = new Date(1984, 9, 10)
+    let result = data.getTime() - nascimento.getTime();
+    let dif = Math.floor(result / (1000 * 60 * 60 * 24 * 365.25))
+    time.innerHTML = dif //data.getHours();
+
+
     resultado.appendChild(time)
 
     time.style = 'color: blue'
