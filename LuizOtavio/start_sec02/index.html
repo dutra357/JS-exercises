@@ -6,11 +6,90 @@
     <title>JS Exercise</title>
     <script src="exercicio.js"></script>
 
+    <style>
+        body {
+            background-color: cadetblue;
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box {
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 5px;
+            width: 500px;
+        }
+
+        .box2 {
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 5px;
+            width: 500px;
+        }
+
+        form {
+            padding: 5px;
+        }
+    </style>
 </head>
 
 
 
 <body>
+
+    <div class="container">
+        <div class="box">
+            <h3>Título para exercício</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Sequi aliquid sapiente impedit facilis nam?
+            </p>
+            
+            <div class="form">
+                <form action="">
+                    <label for="input01">input01</label>
+                    <input type="text" name="input01" id="input01">
+                </form>
+            </div>
+
+            <div>
+                <form action="">
+                    <label for="input01">input02</label>
+                    <input type="text" name="input02" id="input02">
+                </form>
+            </div>
+
+            <div>
+                <form action="">
+                    <label for="input01">input03</label>
+                    <input type="text" name="input03" id="input03">
+                </form>
+            </div>
+
+            <div>
+                <form action="">
+                    <label for="input01">input04</label>
+                    <input type="text" name="input04" id="input04">
+                </form>
+            </div>
+
+            <div>
+                <button>Enviar</button>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="box2">
+            <h3>Resultado:</h3>
+            <p></p>
+        </div>
+    </div>
     
 </body>
 </html>
