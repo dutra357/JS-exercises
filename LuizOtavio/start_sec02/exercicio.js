@@ -3,8 +3,11 @@ const form = document.querySelector('#formulario');
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    let string = e.target.querySelector('#input01').value;
-    resultado(string)
+    let primeiro = e.target.querySelector('#input01').value;
+    let segundo = e.target.querySelector('#input02').value;
+    
+    //resultado(primeiro)
+    multiplica(primeiro, segundo)
 })
 
 
@@ -32,6 +35,15 @@ function resultado (msg) {
     resultado.appendChild(time)
 
     time.style = 'color: blue'
+}
+
+function multiplica(a, b) {
+    const resultado = document.querySelector('#box2');
+    const p = document.createElement('p');
+    p.innerHTML = a * b;
+
+    resultado.appendChild(p)
+    p.style = 'color: blue'
 }
 
 //let atual = new Date();
