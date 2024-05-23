@@ -44,6 +44,7 @@ function resultado (msg) {
 
     //cálculo de idade - tempo em JS
     const nascimento = new Date(1984, 9, 10)
+    //Ver aula 64 (try/catch) para formatação de data e hora
     let result = data.getTime() - nascimento.getTime();
     let dif = Math.floor(result / (1000 * 60 * 60 * 24 * 365.25))
     time.innerHTML = dif //data.getHours();
