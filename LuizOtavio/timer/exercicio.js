@@ -2,29 +2,23 @@ const contador = document.querySelector('#contador');
 const start = document.querySelector('#button1')
 const pause = document.querySelector('#button2')
 const zerar = document.querySelector('#button3')
-
 let segundos = 0;
-
+let timer;
 
 //No formulário pega o SUBMIT, já para botãoo CLICK
 start.addEventListener('click', function(e){
-
-    zerarContador();
-    setInterval(time(), 1000);
+    iniciaRelogio()
 })
 
 zerar.addEventListener('click', function(e){
-    e.preventDefault();
     zerarContador();
 })
 
 pause.addEventListener('click', function(e){
-    e.preventDefault();
-    console.log('Pausado!')
+    clearInterval(timer);
 })
 
-
-
+//FUNÇÕES ---
 
 function getTimeSeconds(segundos){
     const data = new Date(segundos * 1000);
@@ -35,9 +29,9 @@ function getTimeSeconds(segundos){
 }
 
 function iniciaRelogio(){
-    const timer = setInterval(function() {
+    timer = setInterval(function() {
         segundos++;
-        contador.innerHTML = segundos;
+        contador.innerHTML = getTimeSeconds(segundos);
     }, 1000)
 }
 
