@@ -17,29 +17,46 @@
 // const primeira = entrada(5);
 // const segunda = primeira(100);
 
-// console.dir(primeira)
+// console.log(segunda)
 
 
 
 
+// //CALLBACK
+// function rand(min = 1000, max = 5000) {
+//     const num = Math.random() * (max - min) + min;
+//     return Math.floor(num);
+// }
 
-function rand(min = 1000, max = 5000) {
-    const num = Math.random() * (max - min) + min;
-    return Math.floor(num);
-}
+// function f1(callback) {
+//     setTimeout(function() {
+//         console.log('f1');
+//         if (callback) callback();
+//     }, rand());
+// }
 
-function f1(callback) {
-    setTimeout(function() {
-        console.log('f1');
-        if (callback) callback();
-    }, rand());
-}
+// function f2(callback) {
+//     setTimeout(function() {
+//         console.log('f2');
+//         if (callback) callback();
+//     }, rand());
+// }
 
-function f2(callback) {
-    setTimeout(function() {
-        console.log('f2');
-        if (callback) callback();
-    }, rand());
-}
+// f1(f2)
 
-f1(f2)
+
+//IIFE - imidiatly invoked functions
+(function() {
+    let nome = "10";
+    nome = +nome;
+    console.log(nome);
+})();
+
+const nome = "OUTRAS COISA"
+
+let product = {
+    valueOf: function (){
+        return 60;
+    }
+};
+console.log(+product)
