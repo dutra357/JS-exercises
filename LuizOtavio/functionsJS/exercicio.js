@@ -1,15 +1,12 @@
 //Lazy evaluation - função geradora
 
 function* generator() {
-    yield 'Valor 1';
-
-    yield 'Valor 2';
-
-    yield 'Valor 3';
+    yield 1;
 }
 
 let teste = generator();
 console.log(teste.next().value)
-console.log(teste.next())
-console.log(teste.next())
-console.log(teste.next()) //DONE-true
+
+
+let num = 123['toString']()
+console.log(num)
