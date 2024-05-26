@@ -40,7 +40,7 @@ function call(valor) {
 function dobra(valor) {return valor % 2 == 0}
 
 let filtrados = base.filter(dobra)
-console.log(filtrados)
+//console.log(filtrados)
 
 
 
@@ -58,3 +58,7 @@ let reduzido = base.reduce(function(acumulador, valor, indice, array) {
     acumulador += valor;
     return acumulador;
 }, 0);
+
+for (let valor of base) {
+    console.log(valor)
+}
