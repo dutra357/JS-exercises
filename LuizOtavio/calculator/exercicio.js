@@ -15,7 +15,7 @@ function startCalc() {
                 const element = event.target;
 
                 if (element.classList.contains('btn-num')) {
-                    this.btnStopDisplay(element.innerText);
+                    this.btnToDisplay(element.innerText);
                 }
                 if (element.classList.contains('btn-clear')) {
                     this.clearDisplay();
@@ -33,7 +33,7 @@ function startCalc() {
         },
 
         makeCalc() {
-            let problem = this.display.value;
+            let problem = String(this.display.value);
 
             try {
                 problem = eval(problem);
@@ -47,6 +47,8 @@ function startCalc() {
             } catch (e) {
                 alert('Invalid value!');
                 return;
+            } finally {
+                this.display.focus();
             }
         },
 
@@ -58,16 +60,19 @@ function startCalc() {
             })
         },
 
-        btnStopDisplay(value) {
+        btnToDisplay(value) {
             this.display.value += value;
+            this.display.focus();
         },
 
         clearDisplay() {
             this.display.value = "";
+            this.display.focus();
         },
 
         delOne() {
             this.display.value = this.display.value.slice(0, -1);
+            this.display.focus();
         },
     }
 }
