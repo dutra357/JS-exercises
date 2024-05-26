@@ -1,3 +1,4 @@
+//FABRIC Model
 function startCalc() {
     //returns a calc object
     return {
