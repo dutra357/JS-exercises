@@ -86,11 +86,13 @@ function Produto (nome, preco, estoque) {
 }
 const p1 = new Produto('TV', 699.99, 12);
 
-//Object.assign reclama um obj vazio
+
 const p2 = Object.assign({}, p1)
+//Object.freeze(p2) //Object.assign reclama um obj vazio
 p2.nome = 'Radio-relogio'
 
-
+//Object.freeze congela o objeto (usar com this)
 
 console.log(p2);
 console.log(p1);
+console.log(Object.keys(p2)) //Object.keys exibe as chaves do obj
