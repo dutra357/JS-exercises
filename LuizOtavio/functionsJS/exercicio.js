@@ -59,6 +59,4 @@ let reduzido = base.reduce(function(acumulador, valor, indice, array) {
     return acumulador;
 }, 0);
 
-for (let valor of base) {
-    console.log(valor)
-}
+base.forEach((x, y) => console.log(x, y))
