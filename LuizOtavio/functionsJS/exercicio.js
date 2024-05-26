@@ -61,18 +61,36 @@ let reduzido = base.reduce(function(acumulador, valor, indice, array) {
 
 //base.forEach((x, y) => console.log(x, y))
 
+
+
+//Objects and methods
 function Produto (nome, preco, estoque) {
     this.nome = nome;
     this.preco = preco;
     
     Object.defineProperty(this, 'estoque', {
-        value: estoque, //valor - pode, inclusive ser uma função
+        //value: estoque, //valor - pode, inclusive ser uma função
         enumerable: true, //exibe a chave
-        writable: false, //se o valor pode ser editado
+        //writable: false, //se o valor pode ser editado
         configurable: true, //se a chave pode ser apagada/reconfig (fazer outro obj define)
+
+
+        get: function() { //getter - pegar o valor
+            return estoque;
+        },
+
+        set: function(valor) {
+            this.estoque = valor;
+        }
     })
 }
-
 const p1 = new Produto('TV', 699.99, 12);
 
+//Object.assign reclama um obj vazio
+const p2 = Object.assign({}, p1)
+p2.nome = 'Radio-relogio'
+
+
+
+console.log(p2);
 console.log(p1);
