@@ -59,4 +59,20 @@ let reduzido = base.reduce(function(acumulador, valor, indice, array) {
     return acumulador;
 }, 0);
 
-base.forEach((x, y) => console.log(x, y))
+//base.forEach((x, y) => console.log(x, y))
+
+function Produto (nome, preco, estoque) {
+    this.nome = nome;
+    this.preco = preco;
+    
+    Object.defineProperty(this, 'estoque', {
+        value: estoque, //valor - pode, inclusive ser uma função
+        enumerable: true, //exibe a chave
+        writable: false, //se o valor pode ser editado
+        configurable: true, //se a chave pode ser apagada/reconfig (fazer outro obj define)
+    })
+}
+
+const p1 = new Produto('TV', 699.99, 12);
+
+console.log(p1);
