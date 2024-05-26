@@ -64,7 +64,8 @@ let reduzido = base.reduce(function(acumulador, valor, indice, array) {
 
 
 //Objects and methods
-function Produto (nome, preco, estoque) {
+//Ao criar o obj o JS já linka a propriedade __prototype__
+function Produto (nome, preco, estoque = 0) {
     this.nome = nome;
     this.preco = preco;
     
@@ -86,13 +87,20 @@ function Produto (nome, preco, estoque) {
 }
 const p1 = new Produto('TV', 699.99, 12);
 
-
-const p2 = Object.assign({}, p1)
+//const p2 = Object.assign({}, p1) //copy de p2
 //Object.freeze(p2) //Object.assign reclama um obj vazio
-p2.nome = 'Radio-relogio'
+//p2.nome = 'Radio-relogio'
 
 //Object.freeze congela o objeto (usar com this)
 
-console.log(p2);
-console.log(p1);
-console.log(Object.keys(p2)) //Object.keys exibe as chaves do obj
+//console.log(Object.keys(p2)) //Object.keys exibe as chaves do obj
+// console.log(p1);
+
+
+const objB = {
+    chaveB: 'B'
+};
+
+//Seta p1 como pai de B
+Object.setPrototypeOf(objB, p1);
+console.log(objB);
