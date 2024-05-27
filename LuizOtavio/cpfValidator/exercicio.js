@@ -65,9 +65,15 @@ ContaCorrente.prototype.constructor = ContaCorrente;
 
 //Polimorfismo-override
 ContaCorrente.prototype.saque = function(valor) {
-    if (valor > (this.saldo + limite)) {
-        console.log('Saldo insuficiente!');
+    if (valor > (this.saldo + this.limite)) {
+        console.log('limite excedido!');
         return;
     }
     this.saldo -= valor;
+    this.verSaldo();
 }
+
+const cc = new ContaCorrente(11, 22, 0, 100);
+
+cc.deposito(10)
+cc.saque(110)
