@@ -87,6 +87,11 @@ function Produto (nome, preco, estoque = 0) {
 }
 const p1 = new Produto('TV', 699.99, 12);
 
+//seta um prototipe de método para a func construtora
+Produto.prototype.desconto = function(percentual) {
+    this.preco -= (this.preco * percentual/100)
+}
+
 //const p2 = Object.assign({}, p1) //copy de p2
 //Object.freeze(p2) //Object.assign reclama um obj vazio
 //p2.nome = 'Radio-relogio'
@@ -103,4 +108,5 @@ const objB = {
 
 //Seta p1 como pai de B
 Object.setPrototypeOf(objB, p1);
-console.log(objB);
+console.log(p1.desconto(10));
+console.log(p1.preco);
