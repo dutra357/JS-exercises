@@ -78,5 +78,22 @@ ContaCorrente.prototype.saque = function(valor) {
 
 const cc = new ContaCorrente(11, 22, 0, 100);
 
-cc.deposito(10)
-cc.saque(110)
+
+
+const pessoas = [
+    {id: 3, nome: 'Luiz'},
+    {id: 2, nome: 'Maria'},
+    {id: 1, nome: 'Helena'}
+]
+
+const novasPessoas = new Map();
+
+for (const pessoa of pessoas) {
+    
+    //Atribuição via desestruturação
+    const {id} = pessoa
+    novasPessoas.set(id, {...pessoa})
+    
+}
+
+console.log(novasPessoas)
