@@ -1,8 +1,6 @@
 //Validador de CPF - 9 números e 2 dígitos
-
 function testCpf(cpf) {
     let entity = Array.from(cpf.replace(/\D+/g, ''));
-
     cpfArray = entity.map((x) => +x);
 
     let count = 0;
@@ -14,7 +12,6 @@ function testCpf(cpf) {
     if (firstDigit > 9) firstDigit = 0;
 
     count = 0;
-
     for (i = 0; i < 10; i++) {
         count += cpfArray[i] * (11 - i);
     }
