@@ -52,6 +52,8 @@ Conta.prototype.verSaldo = function() {
 
 
 
+
+
 function ContaCorrente(agencia, conta, saldo, limite) {
     //Herança
     Conta.call(this, agencia, conta, saldo);
@@ -63,7 +65,8 @@ function ContaCorrente(agencia, conta, saldo, limite) {
 ContaCorrente.prototype = Object.create(Conta.prototype);
 ContaCorrente.prototype.constructor = ContaCorrente;
 
-//Polimorfismo-override
+//Polimorfismo-override (sobrescrita)
+//Polimorfismo de sobrecarga não tem em JS
 ContaCorrente.prototype.saque = function(valor) {
     if (valor > (this.saldo + this.limite)) {
         console.log('limite excedido!');
