@@ -26,4 +26,48 @@ function testCpf(cpf) {
 
 }
 
-testCpf('05086925983')
+//Polimorfismo
+function Conta(agencia, conta, saldo) {
+    this.agencia = agencia;
+    this.saldo = saldo;
+    this.conta = conta;
+}
+
+Conta.prototype.saque = function(valor) {
+    if (this.saldo < valor) {
+        console.log('Saldo insuficiente!');
+        return;
+    }
+    this.saldo -= valor;
+}
+
+Conta.prototype.deposito = function(valor) {
+    this.saldo += valor;
+    this.verSaldo();
+}
+
+Conta.prototype.verSaldo = function() {
+    console.log(this.saldo)
+}
+
+
+
+function ContaCorrente(agencia, conta, saldo, limite) {
+    //Herança
+    Conta.call(this, agencia, conta, saldo);
+
+    this.limite = limite;
+
+}
+
+ContaCorrente.prototype = Object.create(Conta.prototype);
+ContaCorrente.prototype.constructor = ContaCorrente;
+
+//Polimorfismo-override
+ContaCorrente.prototype.saque = function(valor) {
+    if (valor > (this.saldo + limite)) {
+        console.log('Saldo insuficiente!');
+        return;
+    }
+    this.saldo -= valor;
+}
