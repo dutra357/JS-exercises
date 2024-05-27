@@ -92,6 +92,17 @@ Produto.prototype.desconto = function(percentual) {
     this.preco -= (this.preco * percentual/100)
 }
 
+function Camiseta (nome, preco, cor) {
+    Produto.call(this, nome, preco);
+}
+
+Camiseta.prototype = Object.create(Produto.prototype);
+Camiseta.prototype.constructor = Camiseta;
+
+const tShirt = new Camiseta('Regata', 7.5, 'preta');
+tShirt.desconto(10);
+console.log(tShirt);
+
 //const p2 = Object.assign({}, p1) //copy de p2
 //Object.freeze(p2) //Object.assign reclama um obj vazio
 //p2.nome = 'Radio-relogio'
@@ -101,12 +112,11 @@ Produto.prototype.desconto = function(percentual) {
 //console.log(Object.keys(p2)) //Object.keys exibe as chaves do obj
 // console.log(p1);
 
-
 const objB = {
     chaveB: 'B'
 };
 
 //Seta p1 como pai de B
-Object.setPrototypeOf(objB, p1);
-console.log(p1.desconto(10));
-console.log(p1.preco);
+// Object.setPrototypeOf(objB, p1);
+// console.log(p1.desconto(10));
+// console.log(p1.preco);
